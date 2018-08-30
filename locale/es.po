@@ -1,3 +1,37 @@
-# 
+#
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+#, fuzzy
+msgctxt "field:account.debt.start,company:"
+msgid "Company"
+msgstr "Empresa"
+
+#, fuzzy
+msgctxt "field:account.debt.start,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "model:account.debt.start,name:"
+msgid "Account Debt Start"
+msgstr "Deudas de cuenta"
+
+msgctxt "model:ir.action,name:report_account_debt"
+msgid "Account debt"
+msgstr "Deuda de cuenta"
+
+msgctxt "model:ir.action,name:wizard_account_debt"
+msgid "Account debt"
+msgstr "Deuda de cuenta"
+
+msgctxt "model:ir.ui.menu,name:menu_account_debt"
+msgid "Account debt"
+msgstr "Deuda de cuenta"
+
+msgctxt "wizard_button:account.debt,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:account.debt,start,print_:"
+msgid "OK"
+msgstr "Aceptar"
