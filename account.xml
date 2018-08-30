@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+
+        <record model="ir.ui.view" id="account_debt_start_view_form">
+            <field name="model">account.debt.start</field>
+            <field name="type">form</field>
+            <field name="name">account_debt_start_form</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_account_debt">
+            <field name="name">Account debt</field>
+            <field name="wiz_name">account.debt</field>
+        </record>
+        <record model="ir.action.report" id="report_account_debt">
+            <field name="name">Account debt</field>
+            <field name="report_name">account.debt.report</field>
+            <field name="report">account_debt/account_debt.ods</field>
+            <field name="template_extension">ods</field>
+        </record>
+
+        <menuitem parent="account.menu_reporting"
+            sequence="10" action="wizard_account_debt"
+            id="menu_account_debt" icon="tryton-spreadsheet"/>
+
+    </data>
+</tryton>
+
