@@ -69,7 +69,7 @@ class AccountDebtReport(Report):
         for party in parties:
             invoices = Invoice.search([
                 ('state', '=', 'posted'),
-                ('type', '=', 'out'),
+                ('type', 'in', ['out_invoice', 'out_credit_note']),
                 ('company', '=', data['company']),
                 ('party', '=', party.id),
             ], order=[('number', 'ASC')])
@@ -77,6 +77,9 @@ class AccountDebtReport(Report):
             reparto['party'] = party
             invoices_amount_to_pay = _ZERO
             for invoice in invoices:
+                if invoice.type in ['out_credit_note']:
+                    invoice.amount_to_pay *= -1
+                    invoice.total_amount *= -1
                 invoices_amount_to_pay += invoice.amount_to_pay
             reparto['party_credit'] = party.receivable - invoices_amount_to_pay
             reparto['party_receivable'] = party.receivable
