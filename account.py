@@ -18,6 +18,8 @@ class AccountDebtStart(ModelView):
     'Account Debt Start'
     __name__ = 'account.debt.start'
     company = fields.Many2One('company.company', 'Company', required=True)
+    parties = fields.Many2Many('party.party', None, None, 'Entidades',
+        help="Si se deja vacio, consulta por todas las entidades.")
 
     @staticmethod
     def default_company():
@@ -38,6 +40,10 @@ class AccountDebt(Wizard):
         data = {
             'company': self.start.company.id,
             }
+        if self.start.parties:
+            data.update({
+            'parties': [p.id for p in self.start.parties],
+            })
         return action, data
 
 
@@ -55,10 +61,12 @@ class AccountDebtReport(Report):
         _ZERO = Decimal('0')
 
         domain = [('receivable', '>', _ZERO)]
-        partys = Party.search(domain, order=[('name', 'ASC')])
+        if 'parties' in data:
+            domain.append(('id', 'in', data['parties']))
+        parties = Party.search(domain, order=[('name', 'ASC')])
 
         repartos = []
-        for party in partys:
+        for party in parties:
             invoices = Invoice.search([
                 ('state', '=', 'posted'),
                 ('type', '=', 'out'),
