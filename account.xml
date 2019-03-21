@@ -22,7 +22,7 @@ this repository contains the full copyright notices and license terms. -->
 
         <menuitem parent="account.menu_reporting"
             sequence="10" action="wizard_account_debt"
-            id="menu_account_debt" icon="tryton-spreadsheet"/>
+            id="menu_account_debt" icon="tryton-print"/>
 
     </data>
 </tryton>
