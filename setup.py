@@ -61,7 +61,7 @@ setup(name=name,
         ],
     package_data={
         'trytond.modules.account_debt': (info.get('xml', [])
-            + ['tryton.cfg', 'view/*.xml', 'locale/*.po', 'data/*.xml']),
+            + ['tryton.cfg', 'view/*.xml', 'locale/*.po', '*.fods']),
         },
     classifiers=[
         'Development Status :: 4 - Beta',
