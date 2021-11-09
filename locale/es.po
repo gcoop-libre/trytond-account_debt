@@ -2,31 +2,177 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
-#, fuzzy
 msgctxt "field:account.debt.start,company:"
 msgid "Company"
 msgstr "Empresa"
 
-#, fuzzy
-msgctxt "field:account.debt.start,id:"
-msgid "ID"
-msgstr "ID"
+msgctxt "field:account.debt.start,parties:"
+msgid "Entidades"
+msgstr ""
+
+msgctxt "help:account.debt.start,parties:"
+msgid "Si se deja vacio, consulta por todas las entidades."
+msgstr ""
 
 msgctxt "model:account.debt.start,name:"
-msgid "Account Debt Start"
-msgstr "Deudas de cuenta"
+msgid "Account Debt"
+msgstr "Deuda de cuenta"
 
 msgctxt "model:ir.action,name:report_account_debt"
-msgid "Account debt"
+msgid "Account Debt"
 msgstr "Deuda de cuenta"
 
 msgctxt "model:ir.action,name:wizard_account_debt"
-msgid "Account debt"
+msgid "Account Debt"
 msgstr "Deuda de cuenta"
 
 msgctxt "model:ir.ui.menu,name:menu_account_debt"
-msgid "Account debt"
+msgid "Account Debt"
 msgstr "Deuda de cuenta"
+
+msgctxt "report:account.debt.report:"
+msgid "$"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "("
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid ")"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid ","
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "-"
+msgstr "-"
+
+msgctxt "report:account.debt.report:"
+msgid "/"
+msgstr "/"
+
+msgctxt "report:account.debt.report:"
+msgid "/for"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "00/00/0000"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "00:00:00"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid ":"
+msgstr ":"
+
+msgctxt "report:account.debt.report:"
+msgid "???"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "A cobrar"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "Comprobante"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "Contacto:"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "Diferencia a cobrar"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "Dirección:"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "Fecha factura"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "Número"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "Página"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "Total"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "Total a cobrar"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "for each='invoice in reparto['invoices']'"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "for each='reparto in repartos'"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "format_date(invoice.invoice_date, invoice.company.party.lang)"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "invoice.amount_to_pay"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "invoice.invoice_type.rec_name"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "invoice.number"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "invoice.total_amount"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "reparto['party'].address_get(type='delivery').full_address"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "reparto['party'].email"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "reparto['party'].name"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "reparto['party'].phone"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "reparto['party'].vat_number"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "reparto['party_credit']"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "reparto['party_receivable']"
+msgstr ""
+
+msgctxt "report:account.debt.report:"
+msgid "€"
+msgstr ""
 
 msgctxt "wizard_button:account.debt,start,end:"
 msgid "Cancel"
