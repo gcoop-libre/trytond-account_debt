@@ -50,8 +50,8 @@ class AccountDebtReport(Report):
     __name__ = 'account.debt.report'
 
     @classmethod
-    def get_context(cls, records, data):
-        report_context = super(AccountDebtReport, cls).get_context(records, data)
+    def get_context(cls, records, header, data):
+        report_context = super().get_context(records, header, data)
         records = []
         pool = Pool()
         Invoice = pool.get('account.invoice')

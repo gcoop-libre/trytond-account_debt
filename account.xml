@@ -16,8 +16,7 @@
         <record model="ir.action.report" id="report_account_debt">
             <field name="name">Account Debt</field>
             <field name="report_name">account.debt.report</field>
-            <field name="report">account_debt/account_debt.ods</field>
-            <field name="template_extension">ods</field>
+            <field name="report">account_debt/account_debt.fods</field>
         </record>
 
         <menuitem parent="account.menu_reporting"
