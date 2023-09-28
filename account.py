@@ -7,6 +7,7 @@ from trytond.model import fields, ModelView
 from trytond.wizard import Wizard, StateView, Button, StateReport
 from trytond.report import Report
 from trytond.pool import Pool
+from trytond.pyson import Eval
 from trytond.transaction import Transaction
 
 
@@ -16,6 +17,7 @@ class AccountDebtStart(ModelView):
 
     company = fields.Many2One('company.company', 'Company', required=True)
     parties = fields.Many2Many('party.party', None, None, 'Entidades',
+        context={'company': Eval('company', -1)}, depends={'company'},
         help="Si se deja vacio, consulta por todas las entidades.")
 
     @staticmethod
